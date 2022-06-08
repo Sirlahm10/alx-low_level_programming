@@ -1,20 +1,17 @@
 #include "main.h"
-/*
-* main - this is the starting point
-*
-* Return: Always
-*/ 
-int main(void)
+/**
+* print_alphabet_x10 - Prints 10 times the alphabet, in lowercase.
+*/
+void print_alphabet_x10(void)
 {
 	int alph;
+	int k = 1;
 
-	for (alph = 'a'; alph <= 'z'; alph++)
+	While(k++ <= 10)
 	{
-		int k;
-		for (k = 1; k <=10; k++)
+		for (alph = 'a'; alph <= 'z'; alph++)
 		_putchar(alph);
+	_putchar('\n');
 	}
-		_putchar('\n');
-
 return (0);
 }
