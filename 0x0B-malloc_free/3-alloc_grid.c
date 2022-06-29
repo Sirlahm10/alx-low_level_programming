@@ -29,21 +29,19 @@ int **alloc_grid(int width, int height)
 
 		if (twoD[hgt_index] == NULL)
 		{
-…
-[9:35 pm, 27/06/2022] Agatha Alx: #include "main.h"
-#include <stdlib.h>
+			for (; hgt_index >= 0; hgt_index--)
+			free(twoD[hgt_index]);
 
-/**
- * free_grid - Frees a 2-dimensional array of integers.
- * @grid: The 2-dimensional array of integers to be freed.
- * @height: The height of grid.
- */
-void free_grid(int **grid, int height)
-{
-	int index;
+			free(twoD);
+			return (NULL);
+		}
+	}
 
-	for (index = 0; index < height; index++)
-		free(grid[index]);
+	for (hgt_index = 0; hgt_index < height; hgt_index++)
+	{
+		for (wid_index = 0; wid_index < width; wid_index++)
+			twoD[hgt_index][wid_index] = 0;
+	}
 
-	free(grid);
+	return (twoD);
 }
