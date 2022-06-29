@@ -1,4 +1,4 @@
-[9:35 pm, 27/06/2022] Agatha Alx: #include "main.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
